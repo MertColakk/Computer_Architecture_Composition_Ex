@@ -21,12 +21,16 @@ public class Monitor {
 
     //Other Functions
     public void openMonitor(){
-        if(!this.isOpen) System.out.println("Monitor is opening!");
-        else System.out.println("Monitor is already open!");
+        if(!this.getIsOpen()){
+            System.out.println("Monitor is opening!");
+            setIsOpen(true);
+        } else System.out.println("Monitor is already open!");
     }
     public void closeMonitor(){
-        if(this.isOpen) System.out.println("Monitor is closing!");
-        else System.out.println("Monitor is already close!");
+        if(this.getIsOpen()){
+            System.out.println("Monitor is closing!");
+            setIsOpen(false);
+        } else System.out.println("Monitor is already close!");
     }
     public void DisplayInformation(){System.out.println("Model: "+getModel()+"\nResolution: "+getResolution());}
 }

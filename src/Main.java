@@ -17,7 +17,7 @@ public class Main {
 
         //Display Information of My Computer
         System.out.println(); //For \n
-        myComputer.DisplayInformations();
+        myComputer.DisplayInformation();
         System.out.println(); //For \n
 
         //Close Computer

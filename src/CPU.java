@@ -25,11 +25,15 @@ public class CPU {
 
     //Other Functions
     public void openCPU(){
-        if(!isOpen) System.out.println("CPU is opening!");
-        else System.out.println("CPU is already open!");
+        if(!this.isOpen()){
+            System.out.println("CPU is opening!");
+            this.setOpen(true);
+        }else System.out.println("CPU is already open!");
     }
     public void closeCPU(){
-        if(isOpen) System.out.println("CPU is closing!");
-        else System.out.println("CPU is already closed!");
+        if(this.isOpen()){
+            System.out.println("CPU is closing!");
+            this.setOpen(false);
+        } else System.out.println("CPU is already closed!");
     }
 }

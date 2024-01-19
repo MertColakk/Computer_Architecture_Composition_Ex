@@ -27,11 +27,17 @@ public class Motherboard {
     public boolean isOpen() {return isOpen;}
     public void setOpen(boolean open) {isOpen = open;}
     public void openMotherboard(){
-        if(!isOpen) System.out.println("Monitor is opening!");
-        else System.out.println("Monitor is already open!");
+        if(!this.isOpen()){
+            System.out.println("Motherboard is opening!");
+            this.setOpen(true);
+        }
+        else System.out.println("Motherboard is already open!");
     }
     public void closeMotherboard(){
-        if(isOpen) System.out.println("Monitor is closing!");
-        else System.out.println("Monitor is already closed!");
+        if(this.isOpen()){
+            System.out.println("Motherboard is closing!");
+            this.setOpen(false);
+        }
+        else System.out.println("Motherboard is already closed!");
     }
 }
